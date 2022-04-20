@@ -10,6 +10,7 @@ const ItemCard = (props) => {
       <h5 class="card-title text-dark">Description</h5>
       <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       <div class="contador">{props.contador}</div>
+      <button type="button" class="btn btn-outline-primary">Agregar al carrito</button>
     </div>
     </div>
   )
