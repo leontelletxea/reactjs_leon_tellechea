@@ -9,9 +9,16 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
-      <ItemListContainer greetings='Aún estamos trabajando en esto...' card={<ItemCard contador={<ItemCount/>}/>}/>
+      <ItemListContainer card={<ItemCard contador={<ItemCount stock={5} initial={0} onAdd={handlerAgregarCarrito}/>}/>}/>
     </div>
   );
+}
+
+function handlerAgregarCarrito(count){
+  if(count > 0)
+  alert('Se agregaron los ' + count + " items al carrito");
+  else
+  alert("Por favor, sume al menos 1 elemento antes de agregar al carrito");
 }
 
 export default App;
