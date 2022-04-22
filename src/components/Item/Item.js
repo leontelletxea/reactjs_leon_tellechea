@@ -1,9 +1,9 @@
 import { getActiveElement } from '@testing-library/user-event/dist/utils'
 import React from 'react'
-import './ItemCard.css'
+import './Item.css'
 import daysGone from './daysGone.jpg'
 
-const ItemCard = (props) => {
+const Item = (props) => {
   return (
     <div class="card d-flex">
     <div class="card-body">
@@ -16,4 +16,4 @@ const ItemCard = (props) => {
   )
 }
 
-export default ItemCard
+export default Item
