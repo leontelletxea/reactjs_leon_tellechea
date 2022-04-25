@@ -3,28 +3,29 @@ import ItemList from '../ItemList/ItemList';
 import {productos} from './Productos';
 
 const LoadProds = () => {
-    const [juegos, setPrendas] = useState([]);
-    
-    function setProducts() {
-      const myPromise = new Promise((resolve, reject) => {
-        const productos = productos;
-        setTimeout(() => {
-          resolve(productos);
-        }, 2000);
-      });
-      return myPromise;
-    }  
-    
-    useEffect(() => {
-      setProducts()
-        .then(prendaArray => setPrendas(prendaArray));
-    }, [])
-    
-    return (
-      <div>
-        <ItemList productos={productos}/>
-      </div>
-    )
-    }
+
+  const [juegos, setJuegos] = useState([]);
+
+  function traerProductos() {
+    const myPromise = new Promise((resolve) => {
+      const listado = productos;
+      setTimeout(() => {
+        resolve(listado);
+      }, 2000);
+    });
+    return myPromise;
+  }  
+
+  useEffect(() => {
+    traerProductos()
+      .then(juegosArray => setJuegos(juegosArray));
+  }, [])
+
+  return (
+    <div>
+      <ItemList items={juegos}/>
+    </div>
+  )
+}
 
 export default LoadProds

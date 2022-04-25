@@ -1,11 +1,12 @@
 import React from 'react'
-import './ItemListContainer.css'
 import LoadProds from './LoadProds'
 
-const ItemListContainer = ({productos}) => {
+const ItemListContainer = () => {
 
   return (
-    <LoadProds />
+    <div>
+      <LoadProds/>
+    </div>
   )
 }
 

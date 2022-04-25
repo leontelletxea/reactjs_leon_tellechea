@@ -1,10 +1,11 @@
 import React from 'react'
 import Item from '../Item/Item';
+import './ItemList.css'
 
-const ItemList = ({productos}) => {
+const ItemList = ({items}) => {
     return (
       <div class='box d-flex justify-content-center align-items-center text-white'>
-      {productos.map((item) => <Item key={item.id} item={item}/>)}
+      {items.map((item) => <Item key={item.id} item={item}/>)}
     </div>
     )
 }
