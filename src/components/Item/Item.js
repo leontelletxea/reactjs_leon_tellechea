@@ -10,7 +10,7 @@ const Item = ({item}) => {
       <img class="card-img-top" src={item.image}/>
       <h1 class="card-title text-dark">{item.title}</h1>
       <p class="card-text text-dark">{item.description}</p>
-      <h5 class="card-title text-dark">${item.price}</h5>
+      <h5 class="card-title text-dark">AR${item.price}</h5>
       <div class="count"><ItemCount stock={item.stock} initial={0} onAdd={handlerAddToCart}/></div>
     </div>
     </div>
