@@ -4,7 +4,7 @@ import './ItemList.css'
 
 const ItemList = ({items}) => {
     return (
-      <div class='catalogo d-flex justify-content-center'>
+      <div class='catalogo justify-content-center'>
       {items.map((item) => <Item key={item.id} item={item}/>)}
     </div>
     )

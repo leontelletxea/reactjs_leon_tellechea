@@ -11,6 +11,7 @@ const Item = ({item}) => {
       </div>
       <h1 class="card-title text-dark">{item?.title}</h1>
       <h5 class="card-title text-dark">AR${item?.price}</h5>
+      <hr/>
       <div class="count"><ItemCount stock={item?.stock} initial={0} onAdd={handlerAddToCart}/></div>
     </div>
     </div>
