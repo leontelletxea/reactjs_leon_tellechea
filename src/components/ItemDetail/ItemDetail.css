@@ -1,0 +1,17 @@
+.cardDetail{
+    width: 70%;
+    margin-top: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-fluid{
+    padding-top:10%;
+    padding-bottom: 10%;
+}
+
+.count{
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
