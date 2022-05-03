@@ -1,6 +1,6 @@
 .cardDetail{
     width: 70%;
-    margin-top: 300px;
+    margin-top: 150px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -10,8 +10,22 @@
     padding-bottom: 10%;
 }
 
-.count{
-    width: 30%;
+.countDetail{
+    width: 20%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.imgDetailContainer{
+    height: 700px;
+}
+
+.imgDetail{
+    width: 90%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.detailContainer{
+    margin-top: 150px;
 }

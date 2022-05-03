@@ -1,6 +1,7 @@
 import React from 'react'
 import './Item.css'
 import ItemCount from '../ItemCount/ItemCount';
+import {Link, NavLink} from 'react-router-dom'
 
 const Item = ({item}) => {
   return (
@@ -13,6 +14,7 @@ const Item = ({item}) => {
       <h5 class="card-title text-dark">AR${item?.price}</h5>
       <hr/>
       <div class="count"><ItemCount stock={item?.stock} initial={0} onAdd={handlerAddToCart}/></div>
+      <NavLink to={'/item/' + item?.id} className={(nav) => nav.isActive ? 'link-activo' : ''}>Detalle</NavLink>
     </div>
     </div>
   )
