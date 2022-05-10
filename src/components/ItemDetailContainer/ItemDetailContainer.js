@@ -11,7 +11,7 @@ const ItemDetailContainer = () => {
       const listado = products
       
       return listado.find((item) => {
-          return item.id == id;
+          return item.id === id;
       })
   },[id]) 
 

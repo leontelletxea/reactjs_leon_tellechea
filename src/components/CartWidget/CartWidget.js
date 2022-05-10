@@ -4,7 +4,7 @@ import {faCartShopping} from '@fortawesome/free-solid-svg-icons'
 
 function CartWidget() {
     return (
-        <a class="navbar-brand ms-auto" href="#"><FontAwesomeIcon icon={faCartShopping}/></a>
+        <a class="navbar-brand ms-auto" href="/"><FontAwesomeIcon icon={faCartShopping}/></a>
     );
 }
 

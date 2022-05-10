@@ -1,6 +1,6 @@
 export const products = [
     {
-      id: 1,
+      id: "1",
       title: "Days Gone",
       image: "https://as.com/meristation/imagenes/2020/11/03/game_cover/666031971604438123.jpg",
       price: 11200,
@@ -9,7 +9,7 @@ export const products = [
       category: "accion",
     },
     {
-      id: 2,
+      id: "2",
       title: "Call of Duty",
       image: "https://es.keysoff.com/media/catalog/product/cache/5/thumbnail/600x/17f82f742ffe127f42dca9de82fb58b1/c/a/call-of-duty-cover.jpg",
       price: 9500,
@@ -18,7 +18,7 @@ export const products = [
       category: "accion",
     },
     {
-      id: 3,
+      id: "3",
       title: "Gta V",
       image: "https://media.vandal.net/m/15192/grand-theft-auto-v-2015413122229_1.jpg",
       price: 5000,
@@ -27,7 +27,7 @@ export const products = [
       category: "accion",
     },
     {
-      id: 4,
+      id: "4",
       title: "Tomb Raider",
       image: "https://store-images.s-microsoft.com/image/apps.23964.68112460555114547.f599eff6-c432-4510-af15-bfe339796812.955330ba-ec69-4007-a274-96058599d8f5",
       price: 7000,
@@ -36,7 +36,7 @@ export const products = [
       category: "aventura",
     },
     {
-      id: 5,
+      id: "5",
       title: "Far Cry 6",
       image: "https://cdn1.epicgames.com/b4565296c22549e4830c13bc7506642d/offer/TETRA_PREORDER_STANDARD%20EDITION_EPIC_Store_Portrait_1200x1600-1200x1600-ca8b802ff13813c37a44ebf68d0946a2.png",
       price: 13000,
@@ -45,7 +45,7 @@ export const products = [
       category: "aventura",
     },
     {
-      id: 6,
+      id: "6",
       title: "God Of War",
       image: "https://s3.gaming-cdn.com/images/products/7325/orig-fallback-v1/god-of-war-pc-juego-steam-cover.jpg",
       price: 9500,
@@ -54,7 +54,7 @@ export const products = [
       category: "aventura",
     },
     {
-      id: 7,
+      id: "7",
       title: "Fifa 22",
       image: "https://img.g2a.com/323x433/1x1x0/fifa-22-pc-origin-key-europe/dce7598de0604b70ae47d576",
       price: 13900,
@@ -63,7 +63,7 @@ export const products = [
       category: "deportes",
     },
     {
-      id: 8,
+      id: "8",
       title: "NBA 2K22",
       image: "https://image.api.playstation.com/vulcan/ap/rnd/202106/3002/Eaq9uyUlyLZK8L5xTlsPl0rM.png",
       price: 11000,
@@ -72,7 +72,7 @@ export const products = [
       category: "deportes",
     },
     {
-      id: 9,
+      id: "9",
       tittle: "Madden NFL 22",
       image: "https://cdn-products.eneba.com/resized-products/3oSjLWh0PD7mPzjw-dH8E2U4LpvCc4Bh3sbfmHABsWY_350x200_1x-0.jpeg",
       price: 12700,

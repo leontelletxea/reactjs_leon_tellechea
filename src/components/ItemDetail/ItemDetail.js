@@ -16,7 +16,7 @@ const ItemDetail = ({item}) => {
     <div class="cardDetail card mb-3">
     <div class="row g-0">
         <div class="col-md-4">
-            <img src={item?.image} class="imgDetail img-fluid rounded-start" alt={item?.image}/>
+            <img src={item?.image} class="imgDetail img-fluid rounded-start" alt={item?.title}/>
         </div>
         <div class="col-md-8">
         <div class="detailContainer card-body">
