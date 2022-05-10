@@ -1,5 +1,5 @@
 .cardDetail{
-    width: 70%;
+    width: 80%;
     margin-top: 150px;
     margin-left: auto;
     margin-right: auto;
@@ -8,16 +8,13 @@
 .img-fluid{
     padding-top:10%;
     padding-bottom: 10%;
+    padding-left: 5%;
 }
 
 .countDetail{
     width: 20%;
     margin-left: auto;
     margin-right: auto;
-}
-
-.imgDetailContainer{
-    height: 700px;
 }
 
 .imgDetail{
@@ -29,3 +26,8 @@
 .detailContainer{
     margin-top: 150px;
 }
+
+.countConfirmar{
+    width: 50px;
+}
+

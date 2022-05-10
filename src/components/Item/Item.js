@@ -1,6 +1,5 @@
 import React from 'react'
 import './Item.css'
-import ItemCount from '../ItemCount/ItemCount';
 import {Link} from 'react-router-dom'
 
 const Item = ({item}) => {
@@ -13,15 +12,12 @@ const Item = ({item}) => {
       <h1 class="card-title text-dark">{item?.title}</h1>
       <h5 class="card-title text-dark">AR${item?.price}</h5>
       <hr/>
-      <div class="count"><ItemCount stock={item?.stock} initial={0} onAdd={handlerAddToCart}/></div>
-      <Link to={'/item/' + item?.id} className={(nav) => nav.isActive ? 'link-activo' : ''} style={{ textDecoration: 'none' }}>Detalle</Link>
+      <Link to={'/item/' + item?.id} style={{ textDecoration: 'none'}}>
+        <button className="btn btn-success" style={{ marginTop: "5px"}}>Detalle del producto</button>
+      </Link>
     </div>
     </div>
   )
-}
-
-function handlerAddToCart(count){
-  alert('Se agregaron los ' + count + " al carrito");
 }
 
 export default Item

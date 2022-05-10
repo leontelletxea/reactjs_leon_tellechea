@@ -21,7 +21,7 @@ function NavBar(props) {
             <div class="offcanvas-body">
                 <ul class="navbar-nav align-items-start">
                 <li class="nav-item">
-                    <NavLink class='nav-link' to={'/'} className={(nav) => nav.isActive ? 'link-activo' : ''} style={{ textDecoration: 'none' }}>I N I C I O</NavLink>
+                    <NavLink class='nav-link' to={'/'} className={(nav) => nav.isActive ? 'link-activo' : ''} style={{ textDecoration: 'none'}}>I N I C I O</NavLink>
                 </li>
                 <li class="nav-item">
                     <NavLink class='nav-link' to={'/'} className={(nav) => nav.isActive ? 'link-activo' : ''} style={{ textDecoration: 'none' }}>J U E G O S</NavLink>

@@ -1,12 +1,21 @@
-import React from 'react'
+import React, {useContext, useEffect, useState} from 'react';
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount';
+import {Link} from 'react-router-dom';
 
 const ItemDetail = ({item}) => {
+  const [confirmar, setConfirmar] = useState(false);
+  const [cantidad, setCantidad] = useState(0);
+
+  function onAdd(cant) {
+    setConfirmar(true);
+    setCantidad(cant);
+}
+
   return (
     <div class="cardDetail card mb-3">
     <div class="row g-0">
-        <div class="imgDetailContainer col-md-4">
+        <div class="col-md-4">
             <img src={item?.image} class="imgDetail img-fluid rounded-start" alt={item?.image}/>
         </div>
         <div class="col-md-8">
@@ -15,16 +24,20 @@ const ItemDetail = ({item}) => {
             <p class="card-text">{item?.descripcion}</p>
             <h5 class="card-title">Precio: AR${item?.price}</h5>
             <hr/>
-            <div class="countDetail"><ItemCount stock={item?.stock} initial={0} onAdd={handlerAddToCart}/></div>
+            {
+                !confirmar ? (
+                        <ItemCount class="countConfirmar" stock={item.stock} initial={0} onAdd={onAdd} />
+                ) : (
+                    <Link to="/cart" style={{textDecoration: 'none'}}>
+                        <button className="btn btn-success" style={{marginTop: "5px"}}>Confirmar compra</button>
+                    </Link>
+                )
+            }
         </div>
         </div>
     </div>
     </div>
   )
-}
-
-function handlerAddToCart(count){
-  alert('Se agregaron los ' + count + " al carrito");
 }
 
 export default ItemDetail
