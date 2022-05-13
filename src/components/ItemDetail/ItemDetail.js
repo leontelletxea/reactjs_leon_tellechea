@@ -9,9 +9,10 @@ const ItemDetail = ({item}) => {
   const [confirmar, setConfirmar] = useState(false);
   const [cantidad, setCantidad] = useState(0);
 
-  function onAdd(cant) {
+function addHandler(quantityToAdd) {
+    setCantidad(quantityToAdd);
     setConfirmar(true);
-    setCantidad(cant);
+    cartCtx.addProduct({quantity: quantityToAdd, ...item});
 }
 
 function onConfirmar() {
@@ -42,7 +43,7 @@ function onConfirmar() {
             <hr/>
             {
                 !confirmar ? (
-                        <ItemCount class="countConfirmar" stock={item.stock} initial={0} onAdd={onAdd} />
+                        <ItemCount class="countConfirmar" stock={item.stock} initial={0} onAdd={addHandler} />
                 ) : (                
                 <Link to="/cart" style={{textDecoration: 'none'}}>
                     <button onClick={onConfirmar} className="btn btn-success" style={{marginTop: "5px"}}>Confirmar compra</button>
