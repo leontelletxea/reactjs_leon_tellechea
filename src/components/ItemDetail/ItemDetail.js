@@ -2,14 +2,30 @@ import React, {useContext, useEffect, useState} from 'react';
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount';
 import {Link} from 'react-router-dom';
+import CartContext from '../../store/cart-context';
 
 const ItemDetail = ({item}) => {
+  const cartCtx = useContext(CartContext);
   const [confirmar, setConfirmar] = useState(false);
   const [cantidad, setCantidad] = useState(0);
 
   function onAdd(cant) {
     setConfirmar(true);
     setCantidad(cant);
+}
+
+function onConfirmar() {
+
+    cartCtx.addProduct({
+        id: item.id,
+        title: item.title,
+        image: item.image,
+        price: item.price,
+        description: item.description,
+        stock: item.stock,
+        category: item.category,
+        quantity: cantidad,
+    });
 }
 
   return (
@@ -27,12 +43,17 @@ const ItemDetail = ({item}) => {
             {
                 !confirmar ? (
                         <ItemCount class="countConfirmar" stock={item.stock} initial={0} onAdd={onAdd} />
-                ) : (
-                    <Link to="/cart" style={{textDecoration: 'none'}}>
-                        <button className="btn btn-success" style={{marginTop: "5px"}}>Confirmar compra</button>
-                    </Link>
+                ) : (                
+                <Link to="/cart" style={{textDecoration: 'none'}}>
+                    <button onClick={onConfirmar} className="btn btn-success" style={{marginTop: "5px"}}>Confirmar compra</button>
+                </Link>
                 )
             }
+            <button onClick={() => console.log(cartCtx.products)} className="btn btn-success" style={{marginTop: "5px", marginLeft: "5px"}}>Imprimir carrito</button>
+            <button onClick={() => cartCtx.removeProduct(item.id)} className="btn btn-success" style={{marginTop: "5px", marginLeft: "5px"}}>Remove product</button>
+            <button onClick={() => cartCtx.clear()} className="btn btn-success" style={{marginTop: "5px", marginLeft: "5px"}}>Clear</button>
+            <button onClick={() => console.log(cartCtx.isInCart(item.id))} className="btn btn-success" style={{marginTop: "5px", marginLeft: "5px"}}>Is in cart</button>
+            <button onClick={() => console.log(cartCtx.getCartQuantity())} className="btn btn-success" style={{marginTop: "5px", marginLeft: "5px"}}>Quantity</button>
         </div>
         </div>
     </div>
