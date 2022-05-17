@@ -1,0 +1,17 @@
+.cartContainer{
+    height: 10000px;
+    width: 100%;
+    background-color: #3C5E80;
+    position: absolute;
+}
+
+.cartItems{
+    display: flex;
+    flex-wrap:wrap;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.cartTotal{
+    margin-top: 100px;
+}

@@ -4,12 +4,12 @@ import {faDiceD6} from '@fortawesome/free-solid-svg-icons'
 import CartWidget from '../CartWidget/CartWidget';
 import {NavLink} from 'react-router-dom'
 
-function NavBar(props) {
+function NavBar() {
     return (
         <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
             <NavLink class='navbar-brand' to={'/'} className={(nav) => nav.isActive ? 'link-activo' : ''} style={{ textDecoration: 'none' }}>GameDrops <FontAwesomeIcon icon={faDiceD6}/></NavLink>
-            <CartWidget/>
+            <NavLink class='navbar-brand' to={'/cart'} className={(nav) => nav.isActive ? 'link-activo' : ''} style={{textDecoration: 'none', position: "absolute", right: '80px',}}><CartWidget/></NavLink>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
             </button>

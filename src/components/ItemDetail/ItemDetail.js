@@ -50,11 +50,6 @@ function onConfirmar() {
                 </Link>
                 )
             }
-            <button onClick={() => console.log(cartCtx.products)} className="btn btn-success" style={{marginTop: "5px", marginLeft: "5px"}}>Imprimir carrito</button>
-            <button onClick={() => cartCtx.removeProduct(item.id)} className="btn btn-success" style={{marginTop: "5px", marginLeft: "5px"}}>Remove product</button>
-            <button onClick={() => cartCtx.clear()} className="btn btn-success" style={{marginTop: "5px", marginLeft: "5px"}}>Clear</button>
-            <button onClick={() => console.log(cartCtx.isInCart(item.id))} className="btn btn-success" style={{marginTop: "5px", marginLeft: "5px"}}>Is in cart</button>
-            <button onClick={() => console.log(cartCtx.getCartQuantity())} className="btn btn-success" style={{marginTop: "5px", marginLeft: "5px"}}>Quantity</button>
         </div>
         </div>
     </div>

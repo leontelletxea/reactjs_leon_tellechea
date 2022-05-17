@@ -24,7 +24,7 @@ const LoadProds = () => {
       const productsFiltered = id  ? listado.filter(p => p.category === id) : listado;
       setTimeout(() => {
         resolve(productsFiltered);
-      }, 2000);
+      }, 500);
     });
     return myPromise;
   }  
