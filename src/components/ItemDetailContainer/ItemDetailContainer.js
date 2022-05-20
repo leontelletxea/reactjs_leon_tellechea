@@ -1,25 +1,34 @@
 import ItemDetail from '../ItemDetail/ItemDetail';
 import './ItemDetailContainer.css'
-import React, {useMemo} from 'react'
+import React, {useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom'
-import {products} from '../../products';
+import {getFirestore, getDoc, doc} from 'firebase/firestore' 
+
+function getItem(id){
+    const dataBase = getFirestore();
+
+    const itemRef = doc(dataBase, 'items', id);
+
+    return getDoc(itemRef);
+}
 
 const ItemDetailContainer = () => {
-  const { id } = useParams()
+    const { id } = useParams()
+    const [juegoElegido, setItem] = useState({})
 
-  const juegoElegido = useMemo (() => {  
-      const listado = products
-      
-      return listado.find((item) => {
-          return item.id === id;
-      })
-  },[id]) 
+    useEffect(() => {
+        getItem(id)
+        .then(response => {
+            setItem({...response.data(), id : response.id});
+        })
+    })
 
-  return (
-      <div class="detail">       
-          <ItemDetail item={juegoElegido} />            
-      </div>
-  )
+
+    return (
+        <div class="detail">       
+            <ItemDetail item={juegoElegido} />            
+        </div>
+    )
 }
 
 export default ItemDetailContainer

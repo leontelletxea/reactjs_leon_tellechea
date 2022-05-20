@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom';
 import ItemList from '../ItemList/ItemList';
 import './ItemListContainer.css'
-import {products} from '../../products';
+import {collection, getDocs, getFirestore, query, where} from 'firebase/firestore' 
 
 const ItemListContainer = () => {
 
@@ -16,23 +16,28 @@ const ItemListContainer = () => {
 const LoadProds = () => {
 
   const [catalogo, setJuegos] = useState([]);
-  const {id} = useParams()
+  const {id} = useParams();
 
-  function obtainProds(id) {
-    const myPromise = new Promise((resolve) => {
-       const listado = products
-      const productsFiltered = id  ? listado.filter(p => p.category === id) : listado;
-      setTimeout(() => {
-        resolve(productsFiltered);
-      }, 500);
-    });
-    return myPromise;
+  function obtainProds(category) {
+    const dataBase = getFirestore();
+    const itemCollection = collection(dataBase, 'items');
+    const q = category && query(
+      itemCollection,
+      where('category', '==', category)
+    );
+    return getDocs(q || itemCollection);
   }  
 
   useEffect(() => {
     obtainProds(id)
-      .then(response => setJuegos(response)); // Ejecuta la respuesta de la promise cuando se cumple la promesa
-  }, [id])
+      .then(response => {
+        setJuegos(response.docs.map(doc => {
+          return { ...doc.data(), id: doc.id }
+        }));
+
+      })
+      .catch((error) => console.log(error));
+  }, [id]);
 
   return (
     <div>

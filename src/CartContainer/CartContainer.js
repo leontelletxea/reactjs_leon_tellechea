@@ -20,8 +20,9 @@ const CartContainer = () => {
     }else{
       return (
         <div class='cartContainer'>
-          <div class="cartTotal">
+          <div class="cartTotal alert alert-primary" role="alert">
             <h1 class="cartTittle">Usted no tiene items agregados al carrito</h1>
+            <hr/>
             <Link to={'/'} style={{textDecoration: 'none'}}><button className="btn btn-dark">Ir al listado</button></Link>
           </div>
         </div>

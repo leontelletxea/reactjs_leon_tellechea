@@ -13,7 +13,7 @@ const Item = ({item}) => {
       <h5 class="card-title text-dark">AR${item?.price}</h5>
       <hr/>
       <Link to={'/item/' + item?.id} style={{ textDecoration: 'none'}}>
-        <button className="btn btn-success" style={{ marginTop: "5px"}}>Detalle del producto</button>
+        <button className="btn btn-outline-primary" style={{ marginTop: "5px"}}>Detalle del producto</button>
       </Link>
     </div>
     </div>

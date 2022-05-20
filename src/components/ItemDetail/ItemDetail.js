@@ -38,7 +38,7 @@ function onConfirmar() {
         <div class="col-md-8">
         <div class="detailContainer card-body">
             <h1 class="card-title">{item?.title}</h1>
-            <p class="card-text">{item?.descripcion}</p>
+            <p class="card-text">{item?.description}</p>
             <h5 class="card-title">Precio: AR${item?.price}</h5>
             <hr/>
             {
