@@ -46,7 +46,7 @@ function onConfirmar() {
                         <ItemCount class="countConfirmar" stock={item.stock} initial={0} onAdd={addHandler} />
                 ) : (                
                 <Link to="/cart" style={{textDecoration: 'none'}}>
-                    <button onClick={onConfirmar} className="btn btn-success" style={{marginTop: "5px"}}>Confirmar compra</button>
+                    <button onClick={onConfirmar} className="btn btn-primary" style={{marginTop: "5px"}}>Confirmar compra</button>
                 </Link>
                 )
             }
