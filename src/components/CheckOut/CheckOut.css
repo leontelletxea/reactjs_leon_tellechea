@@ -1,15 +1,11 @@
-.checkoutContainer
-{
+.checkoutContainer{
     height: 10000px;
     width: 100%;
     background-color: #3C5E80;
     position: absolute;
 }
 
-.checkoutTitle{
-    margin-top: 100px;
-}
-
 .formInputs{
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

@@ -23,20 +23,17 @@ function NavBar() {
                 <li class="nav-item">
                     <NavLink class='nav-link' to={'/'} className={(nav) => nav.isActive ? 'link-activo' : ''} style={{ textDecoration: 'none'}}>I N I C I O</NavLink>
                 </li>
+                <br/>   
+                <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">C A T E G O R I A S</h5>
+                <br/>
                 <li class="nav-item">
-                    <NavLink class='nav-link' to={'/'} className={(nav) => nav.isActive ? 'link-activo' : ''} style={{ textDecoration: 'none' }}>J U E G O S</NavLink>
+                    <NavLink class='nav-link' to={'/category/accion/'} className={(nav) => nav.isActive ? 'link-activo' : ''} style={{ textDecoration: 'none' }}>A C C I O N</NavLink>
                 </li>
-                <li class="nav-item dropdown">
-                <NavLink class='nav-link dropdown-toggle' id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" to={'/games'} className={(nav) => nav.isActive ? 'link-activo' : ''} style={{ textDecoration: 'none' }}>C A T E G O R I A S</NavLink>
-                <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-                <li><NavLink to={'/category/accion'} className={(nav) => nav.isActive ? 'link-activo' : ''} style={{ textDecoration: 'none' }}>A C C I O N</NavLink></li>
-                <li><NavLink to={'/category/aventura'} className={(nav) => nav.isActive ? 'link-activo' : ''} style={{ textDecoration: 'none' }}>A V E N T  U R A</NavLink></li>
-                <li><NavLink to={'/category/deportes'} className={(nav) => nav.isActive ? 'link-activo' : ''} style={{ textDecoration: 'none' }}>D E P O R T E S</NavLink></li>
-                <li>
-                    <hr class="dropdown-divider"/>
+                <li class="nav-item">
+                    <NavLink class='nav-link' to={'/category/aventura/'} className={(nav) => nav.isActive ? 'link-activo' : ''} style={{ textDecoration: 'none' }}>A V E N T U R A</NavLink>
                 </li>
-                <li><NavLink to={'/'} className={(nav) => nav.isActive ? 'link-activo' : ''} style={{ textDecoration: 'none' }}>T O D O S</NavLink></li>
-                </ul>
+                <li class="nav-item">
+                    <NavLink class='nav-link' to={'/category/deportes/'} className={(nav) => nav.isActive ? 'link-activo' : ''} style={{ textDecoration: 'none' }}>D E P O R T E S</NavLink>
                 </li>
                 </ul>   
             </div>

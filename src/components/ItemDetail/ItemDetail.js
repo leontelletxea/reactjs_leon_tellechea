@@ -1,8 +1,8 @@
-import React, {useContext, useEffect, useState} from 'react';
-import './ItemDetail.css'
+import React, {useContext, useState} from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import {Link} from 'react-router-dom';
 import CartContext from '../../store/cart-context';
+import './ItemDetail.css'
 
 const ItemDetail = ({item}) => {
   const cartCtx = useContext(CartContext);
@@ -43,10 +43,10 @@ function onConfirmar() {
             <hr/>
             {
                 !confirmar ? (
-                        <ItemCount class="countConfirmar" stock={item.stock} initial={0} onAdd={addHandler} />
+                        <ItemCount stock={item.stock} initial={0} onAdd={addHandler}/>
                 ) : (                
                 <Link to="/cart" style={{textDecoration: 'none'}}>
-                    <button onClick={onConfirmar} className="btn btn-primary" style={{marginTop: "5px"}}>Confirmar compra</button>
+                    <button onClick={onConfirmar} className="btn btn-outline-primary" style={{marginTop: "5px"}}>Ir al carrito</button>
                 </Link>
                 )
             }

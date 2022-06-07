@@ -1,5 +1,7 @@
 import React, { useContext } from 'react'
 import CartContext from '../../store/cart-context';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faXmark} from '@fortawesome/free-solid-svg-icons';
 
 const Cart = ({item}) => {
 
@@ -19,7 +21,7 @@ const Cart = ({item}) => {
           <h5 class="card-title text-dark">Precio Unitario: ${item?.price}</h5>
           <hr/>
           <p>Cantidad: {item?.quantity}</p>
-          <button onClick={onRemove} className="btn btn-danger" style={{position: "absolute", right: 0, top: 0}}>X</button>
+          <button onClick={onRemove} className="btn btn-outline-danger" style={{position: "absolute", right: 0, top: 0}}><FontAwesomeIcon icon={faXmark}/></button>
         </div>
         </div>
     )

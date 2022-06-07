@@ -1,8 +1,8 @@
 import ItemDetail from '../ItemDetail/ItemDetail';
-import './ItemDetailContainer.css'
 import React, {useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom'
 import {getFirestore, getDoc, doc} from 'firebase/firestore' 
+import './ItemDetailContainer.css'
 
 function getItem(id){
     const dataBase = getFirestore();

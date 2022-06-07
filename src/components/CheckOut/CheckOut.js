@@ -12,6 +12,7 @@ const CheckOut = () => {
 
     const [buyer, setBuyer] = useState({
         Name: "",
+        LastName: "",
         Email: "",
         Phone: ''
     })
@@ -52,30 +53,45 @@ const CheckOut = () => {
         <div class="checkoutContainer">
             {
                  (!orderId && <div>
-                    <h1 class="checkoutTitle">Ya casi es tuyo...</h1>
-                    <hr />
-                    <h4 checkoutTitle>Datos de Contacto:</h4>
-                    <br />
-                    <form onSubmit={handleSubmit}>
-                        <input class="formInputs" type="text" name="Name" placeholder="Name" value={buyer.Name} onChange={handleInputChange} required/>
-                        <br/>
-                        <input class="formInputs" type="text" name="Email" placeholder="Email" value={buyer.Email} onChange={handleInputChange} required/>
-                        <br/>
-                        <input class="formInputs" type="text" name="Phone" placeholder="Phone" value={buyer.Phone} onChange={handleInputChange} required/>
-                        <br/>
-                        <br/>
-                        <input type="submit" value="Comprar" className='btn btn-success'/>
-                    </form>
+                    <div class="cartTotal">
+                        <div class="alert alert-light" role="alert">
+                        <h1 class="display-4">Completa los campos</h1>
+                        <hr/>
+
+                        <form onSubmit={handleSubmit} class="checkOutForm">
+                        <div class="formInputs form-group">
+                            <label for="exampleInputEmail1">Nombre</label>
+                            <input class="form-control" type="text" name="Name" value={buyer.Name} onChange={handleInputChange} required/>
+                        </div>
+                        <div class="formInputs form-group">
+                            <label for="exampleInputEmail1">Apellido</label>
+                            <input class="form-control" type="text" name="LastName" value={buyer.LastName} onChange={handleInputChange} required/>
+                        </div>
+                        <div class="formInputs form-group">
+                            <label for="exampleInputEmail1">Email</label>
+                            <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" type="email" name="Email" value={buyer.Email} onChange={handleInputChange} required/>
+                        </div>
+                        <div class="formInputs   form-group">
+                            <label>Telefono</label>
+                            <input class="form-control"  type="number" name="Phone" value={buyer.Phone} onChange={handleInputChange} required/>
+                        </div>
+                        <button type="submit" class="btn btn-outline-success">Comprar</button>
+                        </form>   
+                            </div>
+                        </div>
                 </div>)
             }
 
             <div>
                 {
                     orderId && (
-                        <div>
-                            <h3 class="checkoutTitle">Compra realizada!</h3>
+                        <div class="cartTotal">
+                            <div class="alert alert-light" role="alert">
+                            <h1 class="display-4">Compra realizada!</h1>
                             <h4>{`Su numero de seguimiento es: ${orderId}`}</h4>
-                            <Link to="/"><h5>Ir al catalogo</h5></Link>
+                            <hr/>
+                            <Link to={'/'} style={{textDecoration: 'none'}}><button className="btn btn-outline-dark">Ir al listado</button></Link>
+                            </div>
                         </div>
                     )
                 }
