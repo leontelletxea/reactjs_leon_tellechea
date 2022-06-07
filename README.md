@@ -11,11 +11,6 @@
 
 GameDrops es una tienda online de videojuegos que ofrece una amplia variedad de divertidos juegos, hechale un vistazo!
 
-## Recorrido
-
->![alt text](public/gamedrops.gif "GameDrops")
----
-
 ## Funcionalidad del proyecto
 
 Tienda estilo E-Commerce de videojuegos donde podras: ver nuestros productos,
