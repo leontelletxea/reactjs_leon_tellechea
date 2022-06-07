@@ -1,6 +1,6 @@
 <p align="center">
   <p align="center">    
-    <img src="public/screenshot.png" alt="E-Commerce ReactJs" height="250">    
+    <img src="public/gamedrops.png" alt="E-Commerce ReactJs" height="250">    
   </p>
   <p align="center">
     GameDrops By leontelletxea
