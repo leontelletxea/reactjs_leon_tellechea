@@ -1,24 +1,24 @@
 <p align="center">
   <p align="center">    
-    <img src="public/logo192.png" alt="E-Commerce ReactJs" height="250">    
+    <img src="public/screenshot.png" alt="E-Commerce ReactJs" height="250">    
   </p>
   <p align="center">
-    E-commerce ReactJs
+    GameDrops By leontelletxea
   </p>
 </p>
 
 # E-Commerce ReactJs
 
-GameDrops es una tienda online de videojuegos que ofrece una amplia variedad, hechale un vistazo!
+GameDrops es una tienda online de videojuegos que ofrece una amplia variedad de divertidos juegos, hechale un vistazo!
 
-## Demo
+## Recorrido
 
 >![alt text](public/GameDrops.gif "GameDrops")
 ---
 
 ## Funcionalidad del proyecto
 
-Tienda virtual de videojuegos en donde podras: ver nuestros productos,
+Tienda estilo E-Commerce de videojuegos donde podras: ver nuestros productos,
 filtrarlos por categoria, sumarlos al carrito y comprarlos.
 
 ---
