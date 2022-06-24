@@ -1,24 +1,17 @@
-.cardDetail{
-    width: 80%;
-    margin-top: 10em;
+.cardDetail{    
+    width: 85%;
+    margin-top: 8em;
     margin-left: auto;
     margin-right: auto;
 }
 
 .img-fluid{
-    padding-top:10%;
-    padding-bottom: 10%;
-    padding-left: 5%;
-}
-
-.countDetail{
-    width: 20%;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 2em;
 }
 
 .imgDetail{
-    width: 90%;
+    width: 100%;
     height: 100%;
     object-fit: contain;
 }
+

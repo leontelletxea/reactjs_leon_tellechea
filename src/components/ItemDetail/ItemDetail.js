@@ -33,22 +33,23 @@ function onConfirmar() {
     <div class="cardDetail card mb-3">
     <div class="row g-0">
         <div class="col-md-4">
-            <img src={item?.image} class="imgDetail img-fluid rounded-start" alt={item?.title}/>
+        <img src={item?.image} class="imgDetail img-fluid rounded-start" alt={item?.image}/>
         </div>
         <div class="col-md-8">
-        <div class="detailContainer card-body">
-            <h1 class="card-title">{item?.title}</h1>
-            <p class="card-text">{item?.description}</p>
-            <h5 class="card-title">Precio: AR${item?.price}</h5>
+        <div class="card-body">
+            <h5 class="display-1">{item?.title}</h5>
+            <p class="lead">{item?.description}</p>
+            <p class="lead"><strong>Precio: ${item?.price}</strong></p>
+            <p class="card-text"><small class="text-muted">Stock: {item.stock} Unidades</small></p> 
             <hr/>
             {
                 !confirmar ? (
                         <ItemCount stock={item.stock} initial={0} onAdd={addHandler}/>
                 ) : (                
-                <Link to="/cart" style={{textDecoration: 'none'}}>
-                    <button onClick={onConfirmar} className="btn btn-outline-primary" style={{marginTop: "5px"}}>Ir al carrito</button>
-                </Link>
-                )
+                 <Link to="/cart" style={{textDecoration: 'none'}}>
+                    <button onClick={onConfirmar} className="buttonAdd btn btn-outline-primary btn-lg" style={{marginTop: "1em"}}>Ir al carrito</button>
+                 </Link>
+                 )  
             }
         </div>
         </div>

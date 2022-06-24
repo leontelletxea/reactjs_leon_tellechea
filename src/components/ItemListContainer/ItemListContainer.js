@@ -2,11 +2,14 @@ import React, {useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom';
 import ItemList from '../ItemList/ItemList';
 import {collection, getDocs, getFirestore, query, where} from 'firebase/firestore' 
+import './ItemListContainer.css'
 
 const ItemListContainer = () => {
 
   return (
-    <LoadProds/>
+    <div class="box">
+      <LoadProds/>
+    </div>
   )
 }
 
